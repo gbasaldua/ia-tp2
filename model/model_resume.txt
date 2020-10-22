@@ -1,0 +1,29 @@
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 150, 150, 32)      896       
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 75, 75, 32)        0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 75, 75, 64)        8256      
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 37, 37, 64)        0         
+_________________________________________________________________
+flatten (Flatten)            (None, 87616)             0         
+_________________________________________________________________
+dense (Dense)                (None, 256)               22429952  
+_________________________________________________________________
+dropout (Dropout)            (None, 256)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 2)                 514       
+=================================================================
+Total params: 22,439,618
+Trainable params: 22,439,618
+Non-trainable params: 0
+
+
+cada capa está compuesta por una subcapa conlucional, otra de pooling y una de activacion (esta ultima solo para las capas ocultas)
+
+neuronas de la capa de entrada: 150 * 150 * 3  = 67.500
+1ra capa oculta: 32 filtros de 3x3 maxpooling de 2x2 = 75 * 75 * 32 = 180.000
+2da capa oculta: 360.000 un total de 64 filtros de 2x2 = 37 * 37 * 64 = 87.616
+salida: 2 neuronas que representa a un perro o un jardin sin animales

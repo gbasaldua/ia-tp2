@@ -1,2 +1,2 @@
 generate_model_bn.py
-model/*.h5
+model/weights.h5
