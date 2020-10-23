@@ -22,9 +22,9 @@ target_dir = './model/'
 
 # Parametros de Entrenamiento
 
-epochs = 20
+epochs = 60
 length, height = 150, 150
-batch_size = 15 #32
+batch_size = 15
 validation_steps = 30
 Conv1_filters = 32
 Conv2_filters = 64

@@ -38,6 +38,8 @@ cnn.compile(loss='categorical_crossentropy',
             optimizer=Adam(lr=lr),
             metrics=['accuracy'])
 
+cnn.summary()
+
 # informacion para la generacion de la matriz
 test_imgs, test_labels = next(test_batches)
 test_labels = test_labels[:,0]
@@ -49,4 +51,4 @@ cm = confusion_matrix(test_labels, predictions[:,0])
 fig, ax = plot_confusion_matrix(conf_mat=cm, figsize=(14,14), class_names=('dogs', 'gardens'))
 plt.show()
 # se guarda el grafico de la matriz generada
-fig.savefig('./model/conf_matrix.png')
+fig.savefig('/home/guillermo/Documents/dev_python/ia-tp2/model/conf_matrix.png')
